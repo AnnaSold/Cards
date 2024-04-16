@@ -3,6 +3,7 @@ package Anna;
 import Anna.Suit;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class Card {
     private Suit suit;
@@ -40,15 +41,28 @@ public class Card {
         return suit;
     }
 
-   public String getValue() {
-       return value;
+    public String getValue() {
+        return value;
     }
-    public static int findEquelCards(ArrayList<Card> cards){
-    for(Card c: cards){
-        cards.sort(new ValueEqueleComparator());
-        System.out.println(c);
-    }
+
+    public static int findEquelCards(ArrayList<Card> cards) {
+        for (Card c : cards) {
+            cards.sort(new ValueEqueleComparator());
+            System.out.println(c);
+        }
         return 0;
     }
 
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null || getClass() != obj.getClass()) {
+            return false;
+        }
+
+        Card other = (Card) obj;
+        return Objects.equals(this.suit,other.suit) && Objects.equals(this.value,other.value);
+    }
 }

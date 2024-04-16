@@ -3,14 +3,15 @@ package Anna;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class CardFocus {
-    public static ArrayList<Card> readCardListFromText(String file) {
+    public static List<Card> readCardListFromText(String file) {
 
         try {
             Scanner scan = new Scanner(new File(file));
-            ArrayList<Card> desk = new ArrayList<>();
+            List<Card> desk = new ArrayList<>();
             while (scan.hasNext()) {
                 String s = scan.next();
                 String v  = scan.next();

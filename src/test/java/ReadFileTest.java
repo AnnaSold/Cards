@@ -13,7 +13,6 @@ public class ReadFileTest {
         List<Card> fact = new ArrayList<>();
         fact.add(c1);
 
-
-        Assertions.assertEquals(fact, CardFocus.readCardListFromText("INPUT.txt"));
+        Assertions.assertIterableEquals(fact, CardFocus.readCardListFromText("INPUT.txt"));
     }
 }
