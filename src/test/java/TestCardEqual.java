@@ -21,7 +21,7 @@ public class TestCardEqual {
         desk.add(c2);
         desk.add(c3);
         desk.add(c4);
-        Assertions.assertEquals(0,c1.findEquelCards(desk));
+        Assertions.assertEquals(0,Card.findEquelCards(desk));
     }
 
 }

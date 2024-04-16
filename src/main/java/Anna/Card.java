@@ -40,12 +40,15 @@ public class Card {
         return suit;
     }
 
-    public String getValue() {
-        return value;
+   public String getValue() {
+       return value;
     }
-    public int findEquelCards(ArrayList<Card> cards){
-
+    public static int findEquelCards(ArrayList<Card> cards){
+    for(Card c: cards){
+        cards.sort(new ValueEqueleComparator());
+        System.out.println(c);
+    }
         return 0;
     }
-    
+
 }

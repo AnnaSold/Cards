@@ -3,6 +3,7 @@ package Anna;
 import java.util.ArrayList;
 import java.util.Comparator;
 
+import static Anna.Card.findEquelCards;
 import static Anna.Suit.*;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
@@ -19,6 +20,7 @@ public class Main {
         desk.add(c3);
         desk.add(c4);
         System.out.println(desk);
+        findEquelCards(desk);
         }
 
     }
