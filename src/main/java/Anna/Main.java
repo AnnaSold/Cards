@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Comparator;
 
 import static Anna.Card.findEquelCards;
+import static Anna.CardFocus.readCardListFromText;
 import static Anna.Suit.*;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
@@ -19,8 +20,9 @@ public class Main {
         desk.add(c2);
         desk.add(c3);
         desk.add(c4);
-        System.out.println(desk);
-        findEquelCards(desk);
+        readCardListFromText("INPUT2.txt");
+        //System.out.println(desk);
+        //findEquelCards(desk);
         }
 
     }
